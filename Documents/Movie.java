@@ -1,9 +1,5 @@
 
 public class Movie {
-	public static final int CHARGE_OF_REGULAR = 3000;
-	public static final int CHARGE_OF_NEWRELEASE = 4000;
-	public static final int CHARGE_OF_CHILDRENS = 2500;
-	public static final int PRICEPLUS_POINT = 1;
 	
 	private boolean availabe;
 	private String title;
@@ -18,14 +14,14 @@ public class Movie {
 		this.frequentRenterPoint = frequentRenterPoint;
 	}
 	
-	public double getCharge(int rentDays, int giaTien, int tienCongThem) {
+	public double getCharge(int rentDays) {
 		double rs = 0;
-		rs += chargeComputing.getCharge(rentDays, giaTien, tienCongThem);
+		rs += chargeComputing.getCharge(rentDays);
 		return rs;
 	}
-	public int getFrequentRenterPoints(int rentdays, int diemCongThem) {
+	public int getFrequentRenterPoints(int rentdays) {
 		int rs = 0;
-		rs+= this.frequentRenterPoint.getPoint(rentdays, diemCongThem);
+		rs+= this.frequentRenterPoint.getPoint(rentdays);
 		return rs; 
 		
 	}

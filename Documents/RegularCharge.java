@@ -2,12 +2,12 @@
 public class RegularCharge implements ChargeComputing {
 
 	@Override
-	public double getCharge(int rentDays, int giaTien, int tienCongThem) {
+	public double getCharge(int rentDays) {
 		double rs = 0;
 		if (rentDays >= 3) {
-			rs += giaTien + tienCongThem;
+			rs += CHARGE_OF_REGULAR + PLUS_CHARGE_OF_REGULAR;
 		} else  {
-			rs += giaTien;
+			rs += CHARGE_OF_REGULAR;
 		}
 		return rs;
 	}

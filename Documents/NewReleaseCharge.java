@@ -2,8 +2,8 @@
 public class NewReleaseCharge implements ChargeComputing{
 
 	@Override
-	public double getCharge(int rentDays, int giaTien, int tienCongThem) {
-		return giaTien;
+	public double getCharge(int rentDays) {
+		return CHARGE_OF_REGULAR;
 	}
 	
 }

@@ -2,10 +2,10 @@
 public class RegularPoints implements FrequentRenterPointsWay{
 
 	@Override
-	public int getPoint(int soNgayThue, int diemCong) {
+	public int getPoint(int soNgayThue) {
 		int rs = 0;
 		if(soNgayThue < 1 ) {
-			rs += diemCong;
+			rs += PRICEPLUS_POINT;
 		}
 		return rs;
 	}
